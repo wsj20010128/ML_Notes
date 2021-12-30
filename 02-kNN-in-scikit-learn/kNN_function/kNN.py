@@ -11,8 +11,8 @@ def kNN_classify(k, X_train, y_train, x):
         "the feature number of x must be equal to X_train"
 
     distances = [sqrt(np.sum((x_train - x) ** 2)) for x_train in X_train]
-    nearst = np.argsort(distances)
-    topK_y = [y_train[i] for i in nearst[:k]]
+    nearest = np.argsort(distances)
+    topK_y = [y_train[i] for i in nearest[:k]]
     votes = Counter(topK_y)
 
     return votes.most_common(1)[0][0]
