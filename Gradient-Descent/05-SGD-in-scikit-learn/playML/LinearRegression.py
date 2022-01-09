@@ -1,5 +1,5 @@
 import numpy as np
-from .metrics import r2_score
+from metrics import r2_score
 
 
 class LinearRegression:
@@ -110,7 +110,7 @@ class LinearRegression:
             theta = initial_theta
             m = len(X_b)
 
-            for cur_iter in n_iters:
+            for cur_iter in range(n_iters):
                 indexes = np.random.permutation(m)
                 X_b_new = X_b[indexes]
                 y_new = y[indexes]
