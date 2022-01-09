@@ -80,6 +80,8 @@ class LinearRegression:
         self.intercept_ = self._theta[0]
         self.coef_ = self._theta[1:]
 
+        return self
+
     def predict(self, X_predict):
         """
         given X_predict, a data set to be predicted
